@@ -1,0 +1,14 @@
+services:
+  # API Service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      target: prod
+    container_name: github-repo-scoring-api-prod
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: production                        # will come from environment variables in production
+      PORT: 3000                                  # will come from environment variables in production
+      GITHUB_API_BASE_URL: https://api.github.com # will come from environment variables in production
