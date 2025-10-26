@@ -2,6 +2,7 @@ import { INestApplication, Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
 import { DocumentBuilder, OpenAPIObject, SwaggerModule } from '@nestjs/swagger'
+import helmet from 'helmet'
 import { cleanupOpenApiDoc } from 'nestjs-zod'
 
 import { AppModule } from './app.module'
@@ -18,6 +19,9 @@ async function bootstrap() {
             allowedHeaders: ['Content-Type', 'Accept', 'Origin'],
             credentials: false
         })
+
+        // Helmet Security headers
+        app.use(helmet({ contentSecurityPolicy: false }))
 
         const configService: ConfigService = app.get(ConfigService)
 
