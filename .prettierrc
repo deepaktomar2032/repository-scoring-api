@@ -1,0 +1,16 @@
+{
+  "importOrderParserPlugins": [
+    "typescript",
+    "decorators-legacy",
+    "classProperties"
+  ],
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^src/(.*)$", "^[./]"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "tabWidth": 4,
+  "printWidth": 120,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
