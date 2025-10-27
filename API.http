@@ -1,0 +1,10 @@
+@host = http://localhost:3000
+
+### Get scored repositories (TypeScript)
+GET {{host}}/repositories/score?language=typescript&created_at=2025-01-01
+Accept: application/json
+
+### Another example (Python)
+GET {{host}}/repositories/score?language=python&created_at=2025-06-01
+Accept: application/json
+

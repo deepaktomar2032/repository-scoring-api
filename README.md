@@ -64,6 +64,8 @@ Response example:
 }
 ```
 
+For simplicity, a few example requests are included in the `API.http` file & could be run directly using the VS-Code REST Client extension.
+
 
 ## API Docs (Swagger)
 - Swagger UI available at:
